@@ -1,0 +1,66 @@
+You visit an ATM and enter an amount to withdraw. The ATM works as follows:
+If the amount is a multiple of 100, the ATM checks if 100-rupee notes are available.
+If 100-rupee notes are available, it allows any amount in multiples of 100.
+If 100-rupee notes are not available, it only allows withdrawals in multiples of 500.
+If the entered amount doesn’t satisfy the condition, it shows:
+Enter amount in multiples of 500
+Input Format
+
+The first line contains an integer amount — the amount the user wants to withdraw.
+The second line contains a string noteStatus — either "available" or "not available" indicating the availability of 100-rupee notes.
+Constraints
+
+100 <= amount <= 100000
+noteStatus is either "available" or "not available"
+Assume ATM has sufficient cash for the logic to work; you’re only validating note denomination logic.
+Output Format
+
+if 100-rupee notes are available and amount % 100 == 0, print:
+Amount can be withdrawn
+If 100-rupee notes are not available but amount % 500 == 0, print:
+Amount can be withdrawn
+Otherwise, print:
+Enter amount in multiples of 500
+Sample Input 0
+
+1200  
+available
+Sample Output 0
+
+Amount 1200 can be withdrawn
+Sample Input 1
+
+1200  
+not available
+Sample Output 1
+
+Enter amount in multiples of 500
+Sample Input 2
+
+1500  
+not available
+Sample Output 2
+
+Amount 1500 can be withdrawn
+
+Code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int amount=sc.nextInt();
+        sc.nextLine();
+        String notestatus=sc.nextLine();
+        if((amount%100==0) && notestatus.equals("available")){
+                System.out.println("Amount "+amount+" can be withdrawn");
+            }else if(amount%500==0 && notestatus.equals("not available")){
+            System.out.println("Amount "+amount+" can be withdrawn");
+        }else{
+                System.out.println("Enter amount in multiples of 500");
+            }
+    }
+}
