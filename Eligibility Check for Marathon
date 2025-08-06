@@ -1,0 +1,49 @@
+You are organizing a city marathon event. Each participant must be at least 18 years old, and their fitness score must be 60 or more to be eligible.
+Given a participant's age and fitness score, determine if they are eligible.
+Input Format
+
+The first line contains an integer age
+The second line contains an integer fitnessScore
+Constraints
+
+1 <= age <= 100
+0 <= fitnessScore <= 100
+Output Format
+
+If the participant is eligible, print:
+Eligible for marathon
+Otherwise, print:
+Not eligible for marathon
+Sample Input 0
+
+20  
+65
+Sample Output 0
+
+Eligible for marathon
+Sample Input 1
+
+17  
+70
+Sample Output 1
+
+Not eligible for marathon
+
+Code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+        int fitness = sc.nextInt();
+        if(age>=18 && fitness>=60){
+            System.out.println("Eligible for marathon");
+        }else{
+            System.out.println("Not eligible for marathon");
+        }
+    }
+}
