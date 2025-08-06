@@ -1,0 +1,38 @@
+Write a program to print numbers from 1 to N in normal order and then in reverse order, all in the same line, separated by a space.
+Input Format
+
+A single integer N
+Constraints
+
+1 <= N <= 1000
+Output Format
+
+First, print numbers from 1 to N, separated by a space
+Then, print numbers from N to 1, separated by a space
+All in a single line, with a single space between each number.
+Sample Input 0
+
+5
+Sample Output 0
+
+1 2 3 4 5 5 4 3 2 1
+
+Code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++){
+            System.out.print(i+ " ");
+        }
+        for(int i=n;i>=1;i--){
+            System.out.print(i+" ");
+           
+        }
+    }
+}
