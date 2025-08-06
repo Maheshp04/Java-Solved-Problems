@@ -1,0 +1,53 @@
+You are given three inputs:
+An integer representing a person's age.
+A floating-point number representing their height in meters.
+A string representing their name.
+Input Format
+
+The first line contains an integer age.
+The second line contains a floating-point number height.
+The third line contains a string name.
+Constraints
+
+1 <= age <= 120
+0.5 <= height <= 2.5
+1 <= length of name <= 100
+name contains only alphabets without spaces.
+Output Format
+
+** Name is Age years old and Height meters tall.**
+
+Sample Input 0
+
+25  
+1.75  
+Pradeep
+Sample Output 0
+
+Pradeep is 25 years old and 1.75 meters tall.
+Sample Input 1
+
+18  
+2.00  
+Alice
+Sample Output 1
+
+Alice is 18 years old and 2.00 meters tall.
+
+Code
+
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int age =sc.nextInt();
+       float height =sc.nextFloat();
+       sc.nextLine();
+       String name =sc.nextLine();
+       System.out.printf("%s is %d years old and %.2f meters tall.\n",name,age,height);
+        sc.close();
+        
+    }
+}
