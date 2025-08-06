@@ -1,0 +1,79 @@
+You went shopping and bought 3 different items. You are given:
+The cost of each item
+The quantity of each item
+You also have a budget.
+Write a program to:
+Calculate the total bill before tax.
+Add 10% tax to get the final bill.
+Check if the final bill is within the budget or exceeds it.
+Input Format
+
+The first line contains two integers: cost1 quantity1
+
+The second line contains two integers: cost2 quantity2
+
+The third line contains two integers: cost3 quantity3
+
+The fourth line contains one integer: budget
+
+Constraints
+
+1 <= cost, quantity, budget <= 10^5
+Use float or double for tax calculation
+Tax is fixed at 10%
+Output Format
+
+Print the total before tax and after tax (formatted to 2 decimal places), and then print:
+"Within Budget" if the final bill is less than or equal to the budget
+"Over Budget" otherwise
+Sample Input 0
+
+100 2  
+50 3  
+20 5  
+500
+Sample Output 0
+
+Total (Before Tax): 450.00  
+Total (After Tax): 495.00  
+Within Budget
+Sample Input 1
+
+150 2  
+200 1  
+50 4  
+600
+Sample Output 1
+
+Total (Before Tax): 700.00  
+Total (After Tax): 770.00  
+Over Budget
+
+Code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int c1=sc.nextInt();
+        int q1=sc.nextInt();
+        int c2=sc.nextInt();
+        int q2=sc.nextInt();
+        int c3=sc.nextInt();
+        int q3=sc.nextInt();
+        int budget=sc.nextInt();
+        float totalamt=(c1*q1)+(c2*q2)+(c3*q3);
+        float finalamt=totalamt+(totalamt*0.1f);
+        System.out.printf("Total (Before Tax): %.2f\n", totalamt);
+        System.out.printf("Total (After Tax): %.2f\n",finalamt);
+        if(finalamt<budget){
+            System.out.println("Within Budget");
+        }else{
+            System.out.println("Over Budget");
+        }
+        sc.close();
+    }
+}
