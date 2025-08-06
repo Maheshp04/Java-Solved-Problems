@@ -1,0 +1,49 @@
+You are given four inputs:
+A string representing your name.
+An integer representing the number of Instagram followers.
+An integer representing the number of posts you’ve made.
+A float representing the number of hours you use Instagram daily.
+Input Format
+
+The first line contains a string name.
+The second line contains an integer followers.
+The third line contains an integer posts.
+The fourth line contains a float hours.
+Constraints
+
+1 <= length of name <= 100
+0 <= followers <= 10^6
+0 <= posts <= 10^5
+0.0 <= hours <= 24.0
+Output Format
+
+My name is , my Instagram has followers, I have posted posts, and I use Instagram for hours daily.
+
+Sample Input 0
+
+Boss  
+1000  
+80  
+3.5
+Sample Output 0
+
+My name is Boss, my Instagram has 1000 followers, I have posted 80 posts, and I use Instagram for 3.5 hours daily.
+
+Code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String name=sc.nextLine().trim();
+        int followers=sc.nextInt();
+        int post=sc.nextInt();
+        float hours=sc.nextFloat();
+        
+        System.out.println("My name is "+name+", my Instagram has "+followers+" followers, I have posted "+post+" posts, and I use Instagram for "+hours+" hours daily.");
+        
+    }
+}
