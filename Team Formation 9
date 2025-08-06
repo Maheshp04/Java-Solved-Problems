@@ -1,0 +1,50 @@
+You are conducting a sports event and you want to divide all the registered players equally into teams.
+Given the total number of players and the number of players required per team, calculate:
+The total number of teams that can be formed
+The number of players who will be left out (not fitting into any team)
+Input Format
+
+The first line contains an integer totalPlayers
+The second line contains an integer playersPerTeam
+Constraints
+
+1 <= totalPlayers <= 10^6
+1 <= playersPerTeam <= totalPlayers
+Output Format
+
+Total teams formed: Players left out:
+
+Sample Input 0
+
+100  
+11
+Sample Output 0
+
+Total teams formed: 9  
+Players left out: 1
+Sample Input 1
+
+40  
+5
+Sample Output 1
+
+Total teams formed: 8  
+Players left out: 0
+
+Code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int totalplayers=sc.nextInt();
+        int playerperteam=sc.nextInt();
+        int team=totalplayers/playerperteam;
+        int leftout=totalplayers%playerperteam;
+        System.out.println("Total teams formed: " + team);
+        System.out.println("Players left out: " + leftout);  
+    }
+}
