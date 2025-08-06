@@ -1,0 +1,51 @@
+You are given two integers. Perform and print the results of the following operations:
+Sum
+Difference
+Product
+Quotient (integer division)
+Remainder
+Input Format
+
+The first line contains an integer a.
+The second line contains an integer b.
+Constraints
+
+-10^6 <= a, b <= 10^6
+b != 0 (to avoid division by zero)
+Output Format
+
+Sum:
+Difference:
+Product:
+Quotient:
+Remainder:
+Sample Input 0
+
+100  
+25
+Sample Output 0
+
+Sum: 125  
+Difference: 75  
+Product: 2500  
+Quotient: 4  
+Remainder: 0
+
+Code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        System.out.println("Sum: "+(a+b));
+        System.out.println("Difference: "+(a-b));
+        System.out.println("Product: "+(a*b));
+        System.out.println("Quotient: "+(a/b));
+        System.out.println("Remainder: "+(a%b));
+    }
+}
