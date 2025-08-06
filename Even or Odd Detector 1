@@ -1,0 +1,41 @@
+Write a program to check whether the given number is even or odd.
+Input Format
+
+A single integer n
+Constraints
+
+-10^6 <= n <= 10^6
+Output Format
+
+Print Even if the number is even
+Print Odd if the number is odd
+Sample Input 0
+
+42
+Sample Output 0
+
+Even
+Sample Input 1
+
+33
+Sample Output 1
+
+Odd
+
+Code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        if(n%2==0){
+            System.out.println("Even");
+        }else{
+            System.out.println("Odd");
+        }
+    }
+}
