@@ -1,0 +1,38 @@
+A number is called a Buzz Number if it is either divisible by 7 or ends with 7.
+Input Format
+
+An integer n
+Constraints
+
+1≤n≤10^9
+Output Format
+
+Print Buzz Number if the number is divisible by 7 or ends with 7, otherwise print Not Buzz Number.
+Sample Input 0
+
+27
+Sample Output 0
+
+Buzz Number
+Sample Input 1
+
+19
+Sample Output 1
+
+Not Buzz Number
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long n=sc.nextLong();
+        if(n%7==0 || n%10==7){
+            System.out.println("Buzz Number");
+        }else{
+            System.out.println("Not Buzz Number");
+        }
+    }
+}
