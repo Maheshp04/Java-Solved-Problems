@@ -1,0 +1,42 @@
+An automorphic number is a number whose square ends with the same digits as the number itself.
+For example, 76 → 76² = 5776 (ends with 76).
+Input Format
+
+An integer n
+Constraints
+
+1≤n≤10^6
+Output Format
+
+Print Automorphic if the number is automorphic, otherwise print Not Automorphic
+Sample Input 0
+
+76
+Sample Output 0
+
+Automorphic
+Sample Input 1
+
+13
+Sample Output 1
+
+Not Automorphic
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sq=n*n;
+        String numstr=String.valueOf(n);
+        String sqstr=String.valueOf(sq);
+        if(sqstr.endsWith(numstr)){
+            System.out.println("Automorphic");
+        }else{
+            System.out.println("Not Automorphic");
+        }
+    }
+}
