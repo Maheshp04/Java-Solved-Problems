@@ -1,0 +1,48 @@
+You are given a single number n, and your task is to print a square pattern using the * symbol.
+The pattern should have n rows and n columns — forming a perfect square.
+This problem strengthens your understanding of nested loops and equal-dimensioned 2D printing.
+Input Format
+
+A single integer n representing both rows and columns.
+Constraints
+
+1≤n≤100
+Output Format
+
+Print a square of n × n made of * symbols
+Each row should be on a new line, with no trailing spaces
+Sample Input 0
+
+4
+Sample Output 0
+
+****
+****
+****
+****
+Sample Input 1
+
+2
+Sample Output 1
+
+**
+**
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
+}
