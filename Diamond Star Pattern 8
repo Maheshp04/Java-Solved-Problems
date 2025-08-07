@@ -1,0 +1,70 @@
+Given an integer n, print a diamond pattern of stars (*).
+The diamond consists of 2*n - 1 rows:
+The first n rows form an increasing pyramid of stars (like the standard pyramid).
+The next n-1 rows form a decreasing inverted pyramid.
+Each row should be properly centered with spaces.
+Input Format
+
+A single integer n denoting the number of rows in the top half of the diamond.
+Constraints
+
+1≤n≤100
+Output Format
+
+Print the diamond star pattern with proper alignment.
+Sample Input 0
+
+3
+Sample Output 0
+
+  *
+ ***
+*****
+ ***
+  *
+Sample Input 1
+
+4
+Sample Output 1
+
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n-1;i++){
+            int space=n-i-1;
+            for(int j=0;j<space;j++){
+                System.out.print(" ");
+            }
+            int star=2*i+1;
+            for(int k=0;k<star;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=n-1;i>=0;i--){
+            int space=n-i-1;
+            for(int j=0;j<space;j++){
+                System.out.print(" ");
+            }
+            int star=2*i+1;
+            for(int k=0;k<star;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
