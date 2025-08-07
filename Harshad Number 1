@@ -1,0 +1,45 @@
+A number is called a Harshad number if it is divisible by the sum of its digits.
+For example, 18 → 1 + 8 = 9 → 18 is divisible by 9 → Harshad.
+Input Format
+
+An integer n
+Constraints
+
+1≤𝑛≤10^9
+Output Format
+
+Print Harshad Number if it is divisible by the sum of its digits, otherwise print Not Harshad Number
+Sample Input 0
+
+18
+Sample Output 0
+
+Harshad Number
+Sample Input 1
+
+23
+Sample Output 1
+
+Not Harshad Number
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int original=n;
+        int sum=0;
+        while(n>0){
+            sum+=n%10;
+            n=n/10;
+        }
+        if(original%sum==0){
+            System.out.println("Harshad Number");
+        }else{
+            System.out.println("Not Harshad Number");
+        }
+    }
+}
