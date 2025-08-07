@@ -1,0 +1,56 @@
+Given an integer N, write a program to check whether the number is an Armstrong number or not.
+An Armstrong number of n digits is an integer such that the sum of its digits raised to the power n is equal to the number itself.
+For example:
+153 is an Armstrong number since 1³ + 5³ + 3³ = 153.
+9474 is an Armstrong number since 9⁴ + 4⁴ + 7⁴ + 4⁴ = 9474
+Input Format
+
+A single integer N
+Constraints
+
+0 ≤ N ≤ 10⁹
+Output Format
+
+Print true if the number is an Armstrong number, otherwise print false.
+Sample Input 0
+
+153
+Sample Output 0
+
+true
+Sample Input 1
+
+123
+Sample Output 1
+
+false
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp=n;
+        int digits=0;
+        int copy=n;
+        while(copy!=0){
+            digits++;
+            copy/=10;
+        }
+        int sum=0;
+        copy=n;
+        while(copy!=0){
+            int digit=copy%10;
+            sum+=Math.pow(digit,digits);
+            copy/=10;
+        }
+        if(sum==temp){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
+    }
+}
