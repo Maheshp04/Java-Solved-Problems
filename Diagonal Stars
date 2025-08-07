@@ -1,0 +1,50 @@
+You are given an integer n. Print an n x n pattern where only the main diagonal elements are stars (*), and all other positions are spaces.
+Input Format
+
+A single integer n representing the size of the square
+Constraints
+
+1≤n≤100
+Output Format
+
+Print an n x n grid where the star appears only on the main diagonal (from top-left to bottom-right), spaces elsewhere.
+Sample Input 0
+
+4
+Sample Output 0
+
+*   
+ *  
+  * 
+   *
+Sample Input 1
+
+5
+Sample Output 1
+
+*    
+ *   
+  *  
+   * 
+    *
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i==j){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
