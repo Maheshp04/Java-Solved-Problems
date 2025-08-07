@@ -1,0 +1,58 @@
+A Spy Number is a number whose sum of digits is equal to the product of its digits.
+Write a program to check if a given number N is a Spy Number.
+Input Format
+
+A single integer N
+Constraints
+
+1 <= N <= 10^9
+Output Format
+
+Print "Spy Number" if N is a spy number
+Otherwise, print "Not a Spy Number"
+Sample Input 0
+
+123
+Sample Output 0
+
+Spy Number
+Explanation 0
+
+Sum of digits = 1 + 2 + 3 = 6 Product of digits = 1 * 2 * 3 = 6
+
+Sample Input 1
+
+21
+Sample Output 1
+
+Not a Spy Number
+Sample Input 2
+
+1
+Sample Output 2
+
+Spy Number
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long n=sc.nextInt();
+        long sum=0;
+        long product=1;
+        while(n>0){
+            long digit=n%10;
+            sum+=digit;
+            product*=digit;
+            n=n/10;
+        }
+        if(sum==product){
+            System.out.println("Spy Number");
+        }else{
+            System.out.println("Not a Spy Number");
+        }
+    }
+}
