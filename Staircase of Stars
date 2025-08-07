@@ -1,0 +1,45 @@
+You are given an integer n. Print a right-angled triangle pattern using * symbols, where:
+The triangle has n rows.
+The first row has 1 star, the second row has 2 stars, and so on up to n stars in the nth row.
+Input Format
+
+A single integer n representing the number of rows
+Constraints
+
+1≤n≤100
+Output Format
+
+A right-angled triangle made of *, aligned to the left.
+Sample Input 0
+
+4
+Sample Output 0
+
+*
+**
+***
+****
+Sample Input 1
+
+2
+Sample Output 1
+
+*
+**
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
